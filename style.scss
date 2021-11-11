@@ -1,0 +1,40 @@
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;}
+body {
+    background-color: $primaryColor;
+    font-size: 30px;
+    box-sizing: border-box;
+};
+
+@mixin center {
+    margin: 0 auto;
+    
+}
+
+.wrapper {
+    @include center();
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: $white;
+    font-family: $font;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 380px;
+}
+.card {
+    margin-bottom: 10px;
+    width: 80px;
+    height: 110px;
+    background-color: $white;
+    border-radius: 10px
+};
+.card:not(:nth-child(4n)) {
+    margin-right: 20px;
+}
