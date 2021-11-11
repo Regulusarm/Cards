@@ -17,24 +17,118 @@ body {
 .wrapper {
     @include center();
     width: 700px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    text-align: center;
     color: $white;
     font-family: $font;
+}
+
+.button {
+    @include center();
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+    color: $red;
+    background-color: $white;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &--active {
+        display: flex;
+    }
 }
 .cards {
     display: flex;
     flex-wrap: wrap;
     width: 380px;
+    @include center()
 }
-.card {
+
+div.back {
+    background: $white;
+    background-image: none;
+}
+
+[data-card="card"] {
     margin-bottom: 10px;
     width: 80px;
     height: 110px;
     background-color: $white;
-    border-radius: 10px
-};
-.card:not(:nth-child(4n)) {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+    &:not(:nth-child(4n)) {
     margin-right: 20px;
+    }
+}
+
+div.reverse {
+ transform: rotate3d(0);
+ background: $white;
+ background-image: none;
+ 
+}  
+
+.flipped {
+ transform: rotate3d(0, 1, 0, 3.142rad);
+}
+
+.correct {
+ opacity: .5;
+ cursor: default;
+ transform: rotate3d(0, 1, 0, 3.142rad);
+}
+
+[data-view="zeraora"] {
+    background-image: url(img/pokemon.jpg);
+    background-size: 440px;
+    background-position-x: 85px;
+    background-position-y: -6px;
+}
+[data-view="pikachu"] {
+    background-image: url(img/pokemon.jpg);
+    background-size: 440px;
+    background-position-x: 172px;
+    background-position-y: -6px;
+}
+[data-view="charizard"] {
+    background-image: url(img/pokemon.jpg);
+    background-size: 440px;
+    background-position-x: 260px;
+    background-position-y: -6px;
+}
+[data-view="snorlax"] {
+    background-image: url(img/pokemon.jpg);
+    background-size: 440px;
+    background-position-x: 347px;
+    background-position-y: -6px;
+}
+[data-view="crustle"] {
+    background-image: url(img/pokemon.jpg);
+    background-size: 440px;
+    background-position-x: 434px;
+    background-position-y: -6px;
+}
+[data-view="greninja"] {
+    background-image: url(img/pokemon.jpg);
+    background-size: 440px;
+    background-position-x: 85px;
+    background-position-y: 118px;
+}
+[data-view="eldegoss"] {
+    background-image: url(img/pokemon.jpg);
+    background-size: 440px;
+    background-position-x: 172px;
+    background-position-y: 118px;
+}
+[data-view="lucario"] {
+    background-image: url(img/pokemon.jpg);
+    background-size: 440px;
+    background-position-x: 347px;
+    background-position-y: 118px;
 }

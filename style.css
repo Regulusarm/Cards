@@ -6,33 +6,150 @@
 body {
   background-color: #82d2e5;
   font-size: 30px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .wrapper {
   margin: 0 auto;
   width: 700px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  text-align: center;
   color: #fff;
   font-family: "Hind Siliguri", sans-serif;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  width: 380px;
+.button {
+  margin: 0 auto;
+  width: 100px;
+  height: 50px;
+  margin-top: 20px;
+  color: #ff4949;
+  background-color: #fff;
+  border-radius: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
 }
 
-.card {
+.button--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 380px;
+  margin: 0 auto;
+}
+
+div.back {
+  background: #fff;
+  background-image: none;
+}
+
+[data-card="card"] {
   margin-bottom: 10px;
   width: 80px;
   height: 110px;
   background-color: #fff;
   border-radius: 10px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  border-radius: 5px;
+  float: left;
+  cursor: pointer;
 }
 
-.card:not(:nth-child(4n)) {
+[data-card="card"]:not(:nth-child(4n)) {
   margin-right: 20px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+div.reverse {
+  -webkit-transform: rotate3d(0);
+          transform: rotate3d(0);
+  background: #fff;
+  background-image: none;
+}
+
+.flipped {
+  -webkit-transform: rotate3d(0, 1, 0, 3.142rad);
+          transform: rotate3d(0, 1, 0, 3.142rad);
+}
+
+.correct {
+  opacity: .5;
+  cursor: default;
+  -webkit-transform: rotate3d(0, 1, 0, 3.142rad);
+          transform: rotate3d(0, 1, 0, 3.142rad);
+}
+
+[data-view="zeraora"] {
+  background-image: url(img/pokemon.jpg);
+  background-size: 440px;
+  background-position-x: 85px;
+  background-position-y: -6px;
+}
+
+[data-view="pikachu"] {
+  background-image: url(img/pokemon.jpg);
+  background-size: 440px;
+  background-position-x: 172px;
+  background-position-y: -6px;
+}
+
+[data-view="charizard"] {
+  background-image: url(img/pokemon.jpg);
+  background-size: 440px;
+  background-position-x: 260px;
+  background-position-y: -6px;
+}
+
+[data-view="snorlax"] {
+  background-image: url(img/pokemon.jpg);
+  background-size: 440px;
+  background-position-x: 347px;
+  background-position-y: -6px;
+}
+
+[data-view="crustle"] {
+  background-image: url(img/pokemon.jpg);
+  background-size: 440px;
+  background-position-x: 434px;
+  background-position-y: -6px;
+}
+
+[data-view="greninja"] {
+  background-image: url(img/pokemon.jpg);
+  background-size: 440px;
+  background-position-x: 85px;
+  background-position-y: 118px;
+}
+
+[data-view="eldegoss"] {
+  background-image: url(img/pokemon.jpg);
+  background-size: 440px;
+  background-position-x: 172px;
+  background-position-y: 118px;
+}
+
+[data-view="lucario"] {
+  background-image: url(img/pokemon.jpg);
+  background-size: 440px;
+  background-position-x: 347px;
+  background-position-y: 118px;
+}
+/*# sourceMappingURL=style.css.map */
