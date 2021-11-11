@@ -48,8 +48,11 @@ body {
 }
 
 div.back {
-    background: $white;
-    background-image: none;
+    background: $red;
+    background-image: url(img/PokéBall.svg);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 [data-card="card"] {
@@ -57,9 +60,8 @@ div.back {
     width: 80px;
     height: 110px;
     background-color: $white;
-    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
-    border-radius: 5px;
+    border-radius: 20px;
     float: left;
     cursor: pointer;
     &:not(:nth-child(4n)) {
@@ -69,10 +71,12 @@ div.back {
 
 div.reverse {
  transform: rotate3d(0);
- background: $white;
- background-image: none;
- 
-}  
+ background:  $red;
+ background-image: url(img/PokéBall.svg);
+ background-size: 50px;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
 
 .flipped {
  transform: rotate3d(0, 1, 0, 3.142rad);
